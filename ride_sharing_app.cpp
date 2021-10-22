@@ -226,7 +226,7 @@ void System::createRide(int riderId, int rideId, int origin, int dest, int seats
 		return;
 	}
 	for(Rider& rider: riders){
-		if(rider.getId() == rideId){
+		if(rider.getId() == riderId){
 			rider.createRide(rideId, origin, dest, seats);
 			drivers--;
 			return;
@@ -237,7 +237,7 @@ void System::createRide(int riderId, int rideId, int origin, int dest, int seats
 
 void System::updateRide(int riderId, int rideId, int origin, int dest, int seats){
 	for(Rider& rider: riders){
-		if(rider.getId() == rideId){
+		if(rider.getId() == riderId){
 			rider.updateRide(rideId, origin, dest, seats);
 			return;
 		}
@@ -247,7 +247,7 @@ void System::updateRide(int riderId, int rideId, int origin, int dest, int seats
 
 void System::withdrawRide(int riderId, int rideId){
 	for(Rider& rider: riders){
-		if(rider.getId() == rideId){
+		if(rider.getId() == riderId){
 			rider.withdrawRide(rideId);
 			drivers++;
 			return;
@@ -258,9 +258,9 @@ void System::withdrawRide(int riderId, int rideId){
 
 int System::closeRide(int riderId, int rideId){
 	for(Rider& rider: riders){
-		if(rider.getId() == rideId){
+		if(rider.getId() == riderId){
 			drivers++;
-			return rider.closeRide(rideId);;
+			return rider.closeRide(rideId);
 		}
 	}
 	cout<<"Rider is not registered."<<endl;
@@ -269,9 +269,10 @@ int System::closeRide(int riderId, int rideId){
 
 int main(){
 	Rider rider1(1, "Rider 1");
-	Driver driver("Driver 1");
 	Rider rider2(2, "Rider 2");
 	Rider rider3(3, "Rider 3");
+
+	Driver driver("Driver 1");
 
 	vector<Rider> riders;
 	riders.push_back(rider1);
