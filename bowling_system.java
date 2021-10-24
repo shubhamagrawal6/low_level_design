@@ -206,16 +206,16 @@ public class prac {
         int score;
         Random random = new Random();
         for(int i=0; i<20; i++){
-            score = Math.abs(random.nextInt(10));
+            score = Math.abs(random.nextInt(11));
             s1.add(score);
             g.roll(index, p1, score);
-            score = Math.abs(random.nextInt(10));
+            score = Math.abs(random.nextInt(11));
             s2.add(score);
             g.roll(index, p2, score);
-            score = Math.abs(random.nextInt(10));
+            score = Math.abs(random.nextInt(11));
             s3.add(score);
             g.roll(index, p3, score);
-            score = Math.abs(random.nextInt(10));
+            score = Math.abs(random.nextInt(11));
             s4.add(score);
             g.roll(index, p4, score);
         }
