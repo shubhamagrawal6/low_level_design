@@ -78,7 +78,7 @@ void System::registerEmployee(Employee& employee){
 
 void System::registerManager(int empId, int managerId){
     if(!employeeMap.count(empId) || !employeeMap.count(managerId)){
-        cout<<"Either Employee of Manager is not registered! Pleas provide correct details."<<endl;
+        cout<<"Either Employee of Manager is not registered! Please provide correct details."<<endl;
         return;
     }
 
