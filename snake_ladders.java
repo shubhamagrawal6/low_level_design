@@ -133,7 +133,7 @@ class Game{
     }
 }
 
-public class prac{
+public class snake_ladders{
     public static void main(String[] args){
         Player p1 = new Player("Robert");
         Player p2 = new Player("Stannis");
