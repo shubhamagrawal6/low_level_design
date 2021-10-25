@@ -182,7 +182,7 @@ class Game{
     }
 }
 
-public class prac {
+public class bowling_system{
     public static void main(String[] args){
         Player p1 = new Player("Thor");
         Player p2 = new Player("Loki");
