@@ -104,7 +104,7 @@ vector<Book> Catalog::getMostSoldBooksByAuthor(string authorName, int limit){
 
 vector<Book> Catalog::getMostSoldBooksByCategory(Category category, int limit){
 	vector<Book> bookList;
-	auto pq= categoryMap[category];
+	auto pq = categoryMap[category];
 	while(limit-- && pq.empty() == false){
 		bookList.push_back(*(pq.top().second));
 		pq.pop();
